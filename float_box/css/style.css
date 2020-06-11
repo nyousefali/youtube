@@ -1,0 +1,131 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/05/2020, 12:41:43
+    Author     : Násser Yousef Ali
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    
+    background-color: #131F13;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 15vw;
+    height: 15vw;
+    
+    position: relative;
+}
+
+.box{
+    width: 400px;
+    height: 400px;
+    
+    position: absolute;
+    top: 0;
+    left:0;
+    
+    cursor: pointer;
+    
+    background: url(../svg/logo_ny.svg);
+    
+    background-position: 50% 50%;
+    background-size: 400px;
+    
+    border: 1px solid #5FE36A;
+    border-radius: 5px;
+    
+    z-index: 500;
+    
+    
+    transform: rotate(-45deg) skew(25deg);
+    
+    box-shadow: -115px 80px 20px rgba(0, 0, 0, .9);
+    
+    /*box-shadow: -90px 60px 20px rgba(0,0,0,1);*/
+    
+    /*transition: .5s;*/
+    
+    animation: float 1s ease infinite alternate;
+}
+
+@keyframes float{
+    to{
+        transform: rotate(-45deg) skew(25deg) translate(50px, -50px);
+    
+        /*transition: .5s;*/
+
+        box-shadow: -150px 115px 100px rgba(157, 252, 161, .7);
+    }
+}
+
+.box:hover{
+    
+    transform: rotate(-45deg) skew(25deg) translate(50px, -50px);
+    
+    transition: .5s;
+    
+    box-shadow: -150px 115px 100px rgba(157, 252, 161, .7);
+    
+    /*box-shadow: -150px 115px 100px rgba(0,0,0,1);*/
+}
+
+
+
+.box:before{
+    content: '';
+    width: 100px;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: -52px;
+    
+    z-index: -2;
+    
+    background-color: #35C44D;
+    border: 1px solid #35C44D;
+    border-radius: 5px;
+    
+    transform: skewY(-35deg) translateX(-50px);
+     
+}
+
+.box:after{
+    content: '';
+    width: 100%;
+    height: 70px;
+    
+    position: absolute;
+    top: 100%;
+    left: -53px;
+    
+    z-index: -3;
+    
+    background-color: #35C44D;
+    border: 1px solid #35C44D;
+    border-radius: 5px;
+    
+    transform: skewX(-55deg) translateY(-1px);
+     
+}
+
+
+
+
+

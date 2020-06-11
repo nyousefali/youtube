@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/05/2020, 18:09:26
+    Author     : Násser Yousef Ali
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Geo', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+h1{
+    color: #fff;
+    font-size: 3vw;
+}
+
+.ny_stroke{
+    stroke-width: 2px;
+    stroke-dasharray: 150 20;
+    
+    animation: dash_stroke 2s ease-in-out infinite alternate;
+}
+
+@keyframes dash_stroke{
+    from{
+        stroke-dashoffset: 0;
+    }
+    to{
+        stroke-dashoffset: 500;
+    }
+}

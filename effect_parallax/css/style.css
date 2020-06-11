@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/05/2020, 12:06:39
+    Author     : Násser Yousef Ali
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    
+    background-color: #131F1F;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: #fafafa;
+    font-size: 5vw;
+}
+

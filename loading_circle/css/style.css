@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17/05/2020, 16:31:03
+    Author     : Násser Yousef Ali
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    
+    background-color: #111;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loader{
+    width: 20vw;
+    height: 20vw;
+    background-color: #111;
+    
+    border-radius: 50%;
+    
+    border: 10px solid #1f1f1f;
+    
+    position: relative;
+}
+
+.loader:after{
+    content: '';
+    position: absolute;
+    
+    top: -10px;
+    left: -10px;
+    
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 50%;
+    
+    border-top: 10px solid #07E8E0;
+    border-right: 10px solid #07E8E0;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    
+    
+    animation: spin 1.5s ease infinite;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+h1{
+    position: absolute;
+    top: 43%;
+    left: 30%;
+    
+    z-index: 5;
+    
+    font-size: 2vw;
+    
+    color: #07E8E0;
+    
+    animation: blink 1s ease infinite alternate;
+}
+
+@keyframes blink{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

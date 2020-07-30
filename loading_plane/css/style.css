@@ -8,102 +8,104 @@ and open the template in the editor.
     Author     : Násser Yousef Ali
 */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Baloo 2', cursive;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Baloo 2", cursive;
 }
 
-.bg{
-    width: 100%;
-    height: 100vh;
-    background-color: #51649C;
-    
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-color: #51649c;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-h1{
-    color: #F7F9FC;
-    font-size: 4vw;
-    
-    border: 5px solid #F7F9FC;
-    padding: 20px 50px 20px 50px;
+h1 {
+  color: #f7f9fc;
+  font-size: 4vw;
+
+  border: 5px solid #f7f9fc;
+  padding: 20px 50px 20px 50px;
 }
 
-section{
-    width: 100%;
-    height: 100vh;
-    background-color: #EBEDF0;
-    
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    
-    position: relative;
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: #ebedf0;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  position: relative;
 }
 
-#plane{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    animation: plane 2s ease infinite alternate;
-    transform-origin: center;
+#plane {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  animation: plane 2s ease infinite alternate;
+  transform-origin: center;
 }
 
-@keyframes plane{
-    from{
-        transform: rotate(15deg) translateY(-30px);
-    }to{
-        transform: rotate(-10deg)translateY(30px);
-    }
+@keyframes plane {
+  from {
+    transform: rotate(15deg) translateY(-30px);
+  }
+  to {
+    transform: rotate(-10deg) translateY(30px);
+  }
 }
 
-h2{
-    font-size: 1vw;
-    color: #51649C;
-    transform: translateY(120px);
-    animation: blink 2s ease infinite alternate;
+h2 {
+  font-size: 1vw;
+  color: #51649c;
+  transform: translateY(120px);
+  animation: blink 2s ease infinite alternate;
 }
 
-@keyframes blink{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-.wind1, .wind2{
-    width: 300px;
-    height: 300px;
-    position: absolute;
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
+  }
 }
 
-.wind1{
-    top: 20%;
-    animation: winds 4s ease-in-out infinite;
+.wind1,
+.wind2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  opacity: 1;
 }
 
-.wind2{
-    top: 60%;
-    animation: winds 6s ease-in-out infinite;
+.wind1 {
+  top: 20%;
+  animation: winds 4s ease-in-out infinite;
 }
 
-@keyframes winds{
-    0%{
-        right: 0%;
-        opacity: 0;
-    }
-    25%{
-        opacity: 1;
-    }
-    100%{
-        right: 100%;
-        opacity: 1;
-    }
+.wind2 {
+  top: 60%;
+  animation: winds 6s ease-in-out infinite;
+}
+
+@keyframes winds {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    right: 100%;
+    opacity: 1;
+  }
 }

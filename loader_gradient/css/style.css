@@ -8,87 +8,85 @@ and open the template in the editor.
     Author     : Násser Yousef Ali
 */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-section{
-    width: 100%;
-    height: 100vh;
-    
-    background-color: #131F13;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+section {
+  width: 100%;
+  height: 100vh;
+
+  background-color: #1a1a1a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.loader{
-    position: relative;
-    
-    width: 20vw;
-    height: 20vw;
-    
-    background: linear-gradient(#24B230, #5FE36A, #94F799);
-    
-    border-radius: 50%;
-    
-    animation: spin 1s linear infinite;
+.loader {
+  position: relative;
+
+  width: 20vw;
+  height: 20vw;
+
+  background: linear-gradient(#24b230, #5fe36a, #94f799);
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
 }
 
-.logo{
-    position: absolute;
-    
-    width: 35%;
-    height: 35%;
-    
+.logo {
+  position: absolute;
+
+  width: 35%;
+  height: 35%;
 }
 
-@keyframes spin{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.loader span{
-    position: absolute;
-    
-    width: 100%;
-    height: 100%;
-    
-    background: linear-gradient(#24B230, #5FE36A, #94F799);
-    
-    border-radius: 50%;
+.loader span {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(#24b230, #5fe36a, #94f799);
+
+  border-radius: 50%;
 }
 
-.loader span:nth-child(1){
-    filter: blur(5px);
+.loader span:nth-child(1) {
+  filter: blur(5px);
 }
-.loader span:nth-child(2){
-    filter: blur(10px);
+.loader span:nth-child(2) {
+  filter: blur(10px);
 }
-.loader span:nth-child(3){
-    filter: blur(30px);
+.loader span:nth-child(3) {
+  filter: blur(30px);
 }
-.loader span:nth-child(4){
-    filter: blur(60px);
-}
-
-.loader:after{
-    content: '';
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    right: 5%;
-    bottom: 5%;
-    
-    background-color: #131F13;
-    
-    border-radius: 50%;
+.loader span:nth-child(4) {
+  filter: blur(60px);
 }
 
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+
+  background-color: #1a1a1a;
+
+  border-radius: 50%;
+}

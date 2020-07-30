@@ -1,0 +1,749 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1a1a1a;
+}
+
+.sharingan{
+    width: 300px;
+    height: 300px;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    background-color: #D62424;
+    animation: rotation 7s cubic-bezier(.66,0,.48,.91) infinite alternate;
+}
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-1500deg);
+    }
+    100%{
+        transform: rotate(-1500deg);
+    }
+}
+
+/*.sharingan:after{
+    content: '';
+    top: 20%;
+    left: 20%;
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+
+    border: 5px solid rgba(168, 10, 10, .7);
+
+    /*animation: sharingan_after 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+}*/
+
+
+.sharingan:after{ 
+    content: '';
+    
+
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+
+    border: 5px solid rgba(168, 10, 10, .7);
+
+    /*transition: .5s ease;*/
+
+    animation: sharingan_after 7s linear infinite alternate;
+}
+
+@keyframes sharingan_after{
+    0%{
+        top: 20%;
+        left: 20%;
+
+        width: 170px;
+        height: 170px;
+        background-color: #D62424;
+
+        border: 5px solid rgba(168, 10, 10, .7);
+        border-radius: 50%;
+    }
+    60%{
+        top: 20%;
+        left: 20%;
+
+        width: 170px;
+        height: 170px;
+        background-color: #D62424;
+
+        border: 5px solid rgba(168, 10, 10, .7);
+        border-radius: 50%;
+    }
+    70%{
+        top: 25%;
+        left: 25%;
+
+        width: 140px;
+        height: 140px;
+        
+        border: 5px solid #1a1a1a;
+
+        background-color: #1a1a1a;
+
+        border-radius: 0%;
+    }
+    100%{
+        top: 25%;
+        left: 25%;
+
+        width: 140px;
+        height: 140px;
+        
+        border: 5px solid #1a1a1a;
+
+        background-color: #1a1a1a;
+
+        border-radius: 0%;
+    }
+}
+
+/*.sharingan:hover:after{
+    top: 25%;
+    left: 25%;
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+    border-radius: 0%;
+
+    border: 5px solid #1a1a1a;
+
+    transition: .5s ease;
+
+    background-color: #1a1a1a;
+}*/
+
+
+
+
+
+.sharingan:before{
+    content: '';
+    top: 38.5%;
+    left: 38.5%;
+
+    position: absolute;
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    z-index: 10;
+
+    background-color: #1a1a1a;
+    border: 17px solid #D62424;
+
+}
+
+
+
+
+
+.tomoe{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50px;
+    left: 135px;
+
+    z-index: 5;
+
+    background-color: #1a1a1a;
+    transform: rotate(0deg);
+
+    animation: tomoe 7s linear infinite 0s alternate;
+}
+
+/*.sharingan:hover .tomoe{
+    width: 0px;
+    height: 0px;
+    border-radius: 0%;
+
+    background-color: transparent;
+
+    position: absolute;
+    top: 75px;
+    left: 225px;
+
+    border-top: 0px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 55px solid #1a1a1a;
+    border-right: 0px;
+
+    transform: rotate(0deg);
+
+    
+
+    transition: .5s ease;
+    animation: tomoe2 4s linear infinite 0s alternate;
+}*/
+
+@keyframes tomoe{
+    0%{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        top: 50px;
+        left: 135px;
+
+        z-index: 5;
+
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+
+        background-color: #1a1a1a;
+        transform: rotate(0deg);
+    }
+    60%{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        top: 50px;
+        left: 135px;
+
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+
+        z-index: 5;
+
+        background-color: #1a1a1a;
+        transform: rotate(0deg);
+    }
+    70%{
+        width: 0px;
+        height: 0px;
+        border-radius: 0%;
+
+        background-color: transparent;
+
+        top: 75px;
+        left: 225px;
+
+        border-top: 0px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 57px solid #1a1a1a;
+        border-right: 0px;
+
+        transform: rotate(0deg);
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+        border-radius: 0%;
+
+        background-color: transparent;
+
+        top: 75px;
+        left: 223px;
+
+        border-top: 0px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 57px solid #1a1a1a;
+        border-right: 0px;
+
+        transform: rotate(0deg);
+    }
+}
+
+.tomoe:after{
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 5px;
+
+    width: 10px; 
+    height: 15px; 
+    z-index: 5;
+
+    transform: rotate(85deg) skewX(30deg) skewY(30deg);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 00%;
+    border-bottom-left-radius: 40%;
+
+    background-color: #1a1a1a;
+
+    animation: tomoe_after 7s linear infinite alternate;
+    
+}
+
+@keyframes tomoe_after{
+    0%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+.tomoe4{
+    width: 0px;
+    height: 0px;
+    border-radius: 0%;
+
+    position: absolute;
+
+    top: 22px;
+    left: 75px;
+
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 57px solid #1a1a1a;
+
+    z-index: 5;
+
+    background-color: transparent;
+
+    transform: rotate(0deg);
+
+    opacity: 0;
+    transition: .5s ease;
+
+    animation: tomoe4 7s linear infinite alternate;
+}
+
+/*.sharingan:hover .tomoe4{
+    opacity: 1;
+    transition: .5s ease;
+}*/
+
+@keyframes tomoe4{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    60%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+.tomoe2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 180px;
+    left: 210px;
+    z-index: 5;
+
+    background-color: #1a1a1a;
+
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+
+    transform: rotate(120deg);
+    transition: .5s ease;
+    animation: tomoe2 7s linear infinite 0s alternate;
+}
+
+@keyframes tomoe2{
+    0%{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        top: 180px;
+        left: 210px;
+        z-index: 5;
+    
+        background-color: #1a1a1a;
+    
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 1px solid transparent;
+    
+        transform: rotate(120deg);
+    }
+    60%{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        top: 180px;
+        left: 210px;
+        z-index: 5;
+
+        background-color: #1a1a1a;
+
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 1px solid transparent;
+
+        transform: rotate(120deg);
+    }
+    70%{
+        width: 0px;
+        height: 0px;
+        border-radius: 0%;
+
+        background-color: transparent;
+
+        position: absolute;
+        top: 223px;
+        left: 195px;
+
+        border-left: 30px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 57px solid #1a1a1a;
+
+        transform: rotate(0deg);
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+        border-radius: 0%;
+
+        background-color: transparent;
+
+        position: absolute;
+        top: 223px;
+        left: 195px;
+
+        border-left: 30px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 57px solid #1a1a1a;
+
+        transform: rotate(0deg);
+    }
+}
+
+/*.sharingan:hover .tomoe2{
+    width: 0px;
+    height: 0px;
+    border-radius: 0%;
+
+    background-color: transparent;
+
+    position: absolute;
+    top: 225px;
+    left: 195px;
+
+    border-left: 30px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 55px solid #1a1a1a;
+
+    transform: rotate(0deg);
+
+    
+
+    transition: .5s ease;
+}*/
+
+
+
+
+
+
+
+
+
+
+.sharingan:hover .tomoe2:after{
+    background-color: transparent;
+    transition: .5s ease;
+    /*animation: tomoe2 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;*/
+}
+
+@keyframes tomoe2_after{
+    0%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.sharingan:hover .tomoe3{
+    width: 0px;
+    height: 0px;
+    border-radius: 0%;
+
+    background-color: transparent;
+
+    position: absolute;
+    top: 195px;
+    left: 20px;
+
+    border-top: 30px solid transparent;
+    border-bottom: 0px solid transparent; 
+    border-right:55px solid #1a1a1a; 
+
+    transform: rotate(0deg);
+
+    
+
+    /*transition: .5s ease;*/
+    /*animation: tomoe2 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;*/
+}
+
+
+
+.tomoe3{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 180px;
+    left: 60px;
+    z-index: 5;
+
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent; 
+    border-right: 1px solid transparent; 
+
+    background-color: #1a1a1a;
+
+    transform: rotate(240deg);
+
+    animation: tomoe3 7s linear infinite 0s alternate;
+}
+
+@keyframes tomoe3{
+    0%{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 180px;
+        left: 60px;
+        z-index: 5;
+
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent; 
+        border-right: 1px solid transparent; 
+
+        background-color: #1a1a1a;
+
+        transform: rotate(240deg);
+        
+    }
+    60%{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 180px;
+        left: 60px;
+        z-index: 5;
+
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent; 
+        border-right: 1px solid transparent; 
+
+        background-color: #1a1a1a;
+
+        transform: rotate(240deg);
+    }
+    70%{
+        width: 0px;
+        height: 0px;
+        border-radius: 0%;
+
+        background-color: transparent;
+
+        position: absolute;
+        top: 195px;
+        left: 22px;
+
+        border-top: 30px solid transparent;
+        border-bottom: 0px solid transparent; 
+        border-right: 55px solid #1a1a1a; 
+
+        transform: rotate(0deg);
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+        border-radius: 0%;
+
+        background-color: transparent;
+
+        position: absolute;
+        top: 195px;
+        left: 22px;
+
+        border-top: 30px solid transparent;
+        border-bottom: 0px solid transparent; 
+        border-right: 57px solid #1a1a1a; 
+
+        transform: rotate(0deg);
+    }
+}
+
+
+
+/*.sharingan:hover .tomoe3:after{
+    background-color: transparent;
+    transition: .5s ease;
+    animation: tomoe2 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+}*/
+
+
+
+
+
+
+
+
+
+
+/*.sharingan:hover .tomoe:after{
+    background-color: transparent;
+    transition: .5s ease;
+    animation: tomoe2 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+}*/
+
+
+
+
+
+
+
+
+.tomoe2:after{
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 5px;
+
+    width: 10px; 
+    height: 15px; 
+    z-index: 5;
+
+    transform: rotate(85deg) skewX(30deg) skewY(30deg);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 00%;
+    border-bottom-left-radius: 40%;
+    /*border-top-right-radius: -70%;*/
+
+    background-color: #1a1a1a;
+    
+}
+
+
+
+
+
+.tomoe3:after{
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 5px;
+
+    width: 10px; 
+    height: 15px; 
+    z-index: 5;
+
+    transform: rotate(85deg) skewX(30deg) skewY(30deg);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 40%;
+
+    background-color: #1a1a1a;
+
+    animation: tomoe3_after 7s linear infinite alternate;
+}
+@keyframes tomoe3_after{
+    0%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+

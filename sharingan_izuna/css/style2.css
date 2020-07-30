@@ -24,16 +24,24 @@ body{
     border-radius: 50%;
 
     background-color: #D62424;
-    animation: rotation 7s ease infinite;
+    animation: rotation 7s cubic-bezier(.66,0,.48,.91) infinite alternate;
 }
+
 @keyframes rotation{
     0%{
         transform: rotate(0deg);
     }
+    40%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-1080deg);
+    }
     100%{
-        transform: rotate(-1200deg);
+        transform: rotate(-1080deg);
     }
 }
+
 
 .sharingan:after{
     content: '';
@@ -48,7 +56,7 @@ body{
 
     border: 5px solid rgba(168, 10, 10, .7);
 
-    animation: sharingan_after 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+    animation: sharingan_after 7s linear infinite 0s alternate;
 }
 
 @keyframes sharingan_after{
@@ -56,11 +64,11 @@ body{
         border: 5px solid rgba(168, 10, 10, .7);
         background-color: transparent;
     }
-    40%{
+    65%{
         border: 5px solid rgba(168, 10, 10, .7);
         background-color: transparent;
     }
-    50%{
+    70%{
         border: 5px solid #1a1a1a;
         background-color: #1a1a1a;
     }
@@ -85,17 +93,17 @@ body{
 
     background-color: #1a1a1a;
 
-    animation: sharingan_before 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+    animation: sharingan_before 7s ease infinite 0s alternate;
 }
 
 @keyframes sharingan_before{
     0%{
         background-color: #1a1a1a;
     }
-    40%{
+    65%{
         background-color: #1a1a1a;
     }
-    50%{
+    70%{
         background-color: #D62424;
     }
     100%{
@@ -119,7 +127,7 @@ body{
     background-color: #1a1a1a;
     transform: rotate(0deg);
 
-    animation: tomoe 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+    animation: tomoe 7s ease infinite 0s alternate;
 }
 
 @keyframes tomoe{
@@ -130,14 +138,14 @@ body{
         height: 30px;
         border-radius: 50%;
     }
-    40%{
+    60%{
         top: 50px;
         left: 135px;
         width: 30px;
         height: 30px;
         border-radius: 50%;
     }
-    50%{
+    70%{
         top: -10px;
         left: 115px;
         width: 70px;
@@ -157,7 +165,7 @@ body{
     content: '';
     position: absolute;
     top: -9px;
-    left: 5px;
+    left: 6px;
 
     width: 10px; 
     height: 15px; 
@@ -186,7 +194,7 @@ body{
     background-color: #1a1a1a;
 
     transform: rotate(120deg);
-    animation: tomoe2 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+    animation: tomoe2 7s ease infinite 0s alternate;
 }
 
 @keyframes tomoe2{
@@ -197,14 +205,14 @@ body{
         height: 30px;
         border-radius: 50%;
     }
-    40%{
+    60%{
         top: 180px;
         left: 210px;
         width: 30px;
         height: 30px;
         border-radius: 50%;
     }
-    50%{
+    70%{
         top: 145px;
         left: 210px;
         width: 70px;
@@ -254,7 +262,7 @@ body{
 
     transform: rotate(240deg);
 
-    animation: tomoe3 6s cubic-bezier(.29,.47,.08,1) infinite 0s alternate;
+    animation: tomoe3 7s ease infinite 0s alternate;
 }
 
 @keyframes tomoe3{
@@ -265,14 +273,14 @@ body{
         width: 30px;
         border-radius: 50%;
     }
-    40%{
+    60%{
         top: 180px;
         left: 60px;
         height: 30px;
         width: 30px;
         border-radius: 50%;
     }
-    50%{
+    70%{
         top: 140px;
         left: 30px;
         width: 70px;
@@ -312,10 +320,10 @@ body{
     0%{
         background-color: #000;
     }
-    45%{
+    60%{
         background-color: #000;
     }
-    50%{
+    70%{
         background-color: transparent;
     }
     100%{

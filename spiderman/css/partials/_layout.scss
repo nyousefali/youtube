@@ -1,0 +1,283 @@
+// Layout of project
+
+// Container-devices
+$container-xl: 1440px;
+$container-l: 1140px;
+$container-m: 960px;
+$container-s: 540px;
+
+// Mixin of media-queries
+@mixin responsive($device) {
+  @if $device == xl {
+    // For resolutions upper 1440px
+    @media screen and (min-width: $container-xl) {
+      @content;
+    }
+  } @else if $device == l {
+    // For resolutions between 1140px and 1440px
+    @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+      @content;
+    }
+  } @else if $device == m {
+    // For resolutions between 960px and 1440px
+    @media screen and (max-width: $container-l) and (min-width: $container-s) {
+      @content;
+    }
+  } @else if $device == s {
+    // For resolutions less than 960px
+    @media screen and (max-width: $container-m) {
+      @content;
+    }
+  } @else if $device == xs {
+    // For resolutions less than 540px
+    @media screen and (max-width: $container-s) {
+      @content;
+    }
+  }
+}
+
+.container{
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 36px 16px;
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    overflow: hidden;
+
+    @include responsive(s){
+      flex-direction: column;
+      align-items: flex-start;
+
+      padding-top: 144px;
+
+      height: auto;
+    }
+}
+
+.container-item-1{
+    max-width: 580px;
+
+    @include responsive(s){
+      max-width: 960px;
+      order: 2;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.container-item-2{
+  flex-grow: 5;
+
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-start{
+  justify-content: flex-start;
+}
+
+.align-items-center{
+align-items: center;
+}
+
+.w-auto{
+  width: auto;
+}
+
+.bg-loader{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+  //overflow: hidden;
+}
+
+.loader{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  background-color: $white-light;
+
+  animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse{
+  0%{
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70%{
+    box-shadow: 0 0 0 200px rgba(255, 255, 255, 0);
+  }
+  100%{
+    box-shadow: 0 0 0 500px rgba(255, 255, 255, 0);
+  }
+}
+
+
+.bx{
+  width: 40px;
+  height: 40px;
+
+  display: none;
+  position: relative;
+  cursor: pointer;
+
+  @include responsive(s){
+    display: block;
+  }
+
+  &::after{
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 33%;
+    left: 12%;
+
+    width: 75%;
+    height: 2px;
+    border-radius: 2px;
+
+    background-color: $white;
+
+  }
+
+  &::before{
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 57%;
+    left: 12%;
+
+    width: 75%;
+    height: 2px;
+    border-radius: 2px;
+
+    background-color: $white;
+
+  }
+
+}
+
+
+.spiderman{
+    width: 130%;
+    transition: .7s ease;
+    transform: translate3d(-150px,-50px,0);
+
+    @include responsive(xl){
+      transform: translate3d(-190px,-20px,0);
+      width: 140%;
+    }
+
+    @include responsive(s){
+      transform: translate3d(0,-20px,0);
+      width: 100%;
+    }
+}
+
+.div-spiderman{
+  transform: translate3d(-190px,0,0);
+  transition: .7s ease;
+  @include responsive(s){
+    transform: translate3d(0,0,0);
+  }
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+
+        background: linear-gradient(110deg, 
+        $blue-dark 25%, 
+        rgba(11, 12, 16, 0.80) 50%,
+        $blue-dark 70%);
+        
+      }
+
+    
+}
+
+.video{
+    height: 100%;
+
+
+      @include responsive(s){
+        display: none;
+      }
+
+
+    
+}
+
+.bg-lines{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg{
+        width: 100%;
+        border: 0px solid green;
+
+        @include responsive(s){
+            height: 200%;
+            border: 0px solid red;
+        }
+        
+    }
+    
+}

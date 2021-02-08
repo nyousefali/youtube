@@ -1,0 +1,42 @@
+*, *:after, *:before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+@import 'partials/colors';
+@import 'partials/spacing';
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    background: $blue-dark;
+}
+
+img, svg{
+    display: block;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+p{
+    font-size: 14px;
+    color: $gray-3;
+    letter-spacing: 1px;
+    line-height: 140%;
+}
+
+@import 'partials/layout';
+@import 'partials/menu';
+@import 'partials/buttons';
+@import 'partials/animations';
